@@ -43,6 +43,9 @@ label {
 }
 
 .member-item {
+  display:inline-block;
+  text-align: center;
+  width:30%;
   padding: 0.25em 0;
 }
 
@@ -52,4 +55,14 @@ footer {
   color: #fff;
   background: #f76c6c;
   padding: 0.25em 0;
+}
+
+.btn-primary {
+  background-color: #f76c6c;
+  border-color: #f76c6c;
+}
+
+.btn-primary:hover {
+  background-color: #f68585;
+  border-color: #f68585;
 }
