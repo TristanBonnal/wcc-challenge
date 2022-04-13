@@ -1,20 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}WCC - Argonnautes{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/tristan/Bureau/dev/Symfony/wcc-challenge/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/tristan/Bureau/dev/Symfony/wcc-challenge/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
-    </ul>
-</div>
+<!-- Main section -->
+<main>
+  <!-- New member form -->
+  <h2>Ajouter un(e) Argonaute</h2>
+  <form class="new-member-form">
+    <label for="name">Nom de l&apos;Argonaute</label>
+    <input id="name" name="name" type="text" placeholder="Charalampos" />
+    <button type="submit">Envoyer</button>
+  </form>
+  
+  <!-- Member list -->
+  <h2>Membres de l'équipage</h2>
+  <section class="member-list">
+    <div class="member-item">Eleftheria</div>
+    <div class="member-item">Gennadios</div>
+    <div class="member-item">Lysimachos</div>
+    {% for argonaut in argonauts %}
+        <div class="member-item">argonaut.name</div>
+    {% endfor %}
+  </section>
+</main>
 {% endblock %}
