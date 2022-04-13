@@ -18,7 +18,6 @@ class ArgonautFixtures extends Fixture
             $argonaut->setName($faker->firstName('male'));
             $manager->persist($argonaut);
         }
-
         $manager->flush();
     }
 }
