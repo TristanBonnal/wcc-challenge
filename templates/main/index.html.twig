@@ -16,11 +16,8 @@
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
   <section class="member-list">
-    <div class="member-item">Eleftheria</div>
-    <div class="member-item">Gennadios</div>
-    <div class="member-item">Lysimachos</div>
     {% for argonaut in argonauts %}
-        <div class="member-item">argonaut.name</div>
+        <div class="member-item">{{argonaut.name}}</div>
     {% endfor %}
   </section>
 </main>
